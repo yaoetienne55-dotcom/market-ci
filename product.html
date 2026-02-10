@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mini Caméra A9 | Détails Produit</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/src/style.css">
+    <style>
+      /* Page specific styles */
+      body {
+        overflow-y: auto; /* Allow normal scrolling */
+      }
+      .product-page-container {
+        padding-top: 120px; /* Space for fixed nav */
+        padding-bottom: 60px;
+        min-height: 100vh;
+      }
+      .product-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 60px;
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 40px;
+        align-items: start;
+      }
+      .product-image-section {
+        background: #111;
+        border-radius: 20px;
+        height: 500px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border: 1px solid rgba(255,255,255,0.05);
+        position: relative;
+        overflow: hidden;
+      }
+      .product-image-section img {
+        max-width: 80%;
+        max-height: 80%;
+        object-fit: contain;
+        filter: drop-shadow(0 0 20px rgba(0,0,0,0.5));
+      }
+      .product-info h1 {
+        font-size: 3.5rem;
+        margin-bottom: 10px;
+        line-height: 1.1;
+      }
+      .stars-display {
+        color: #FFD700;
+        font-size: 1.2rem;
+        margin: 15px 0;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+      }
+      .stars-text {
+        font-size: 0.9rem;
+        color: #888;
+        font-weight: 400;
+      }
+      .description-full {
+        color: #ccc;
+        line-height: 1.8;
+        margin-bottom: 30px;
+        font-size: 1.05rem;
+      }
+      .features-list {
+        margin-bottom: 30px;
+        list-style: none;
+      }
+      .features-list li {
+        margin-bottom: 10px;
+        display: flex;
+        gap: 10px;
+        color: #aaa;
+      }
+      .features-list li::before {
+        content: "✓";
+        color: var(--accent-green);
+        font-weight: bold;
+      }
+      .reviews-section-page {
+        margin-top: 100px;
+        padding: 60px 0;
+        border-top: 1px solid rgba(255,255,255,0.05);
+      }
+      .reviews-header {
+        text-align: center;
+        margin-bottom: 40px;
+      }
+      /* Reuse carousel styles but centered */
+      .page-reviews-wrapper {
+        position: relative;
+        width: 100%;
+        max-width: 800px;
+        margin: 0 auto;
+        height: 150px;
+        overflow: hidden;
+      }
+      /* Responsive */
+      @media (max-width: 900px) {
+        .product-grid {
+          grid-template-columns: 1fr;
+          gap: 40px;
+        }
+        .product-image-section {
+          height: 350px;
+        }
+        .product-info h1 {
+          font-size: 2.5rem;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    
+    <!-- Nav -->
+    <nav class="glass-nav">
+      <div class="logo">MARKET CI</div>
+      <div class="nav-links">
+        <a href="/">Accueil</a>
+        <a href="shop.html">Boutique</a>
+        <a href="#contact">Contact</a>
+      </div>
+      <div class="nav-actions">
+        <button class="icon-btn" id="search-btn">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+        </button>
+        <button class="icon-btn">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path><line x1="3" y1="6" x2="21" y2="6"></line><path d="M16 10a4 4 0 0 1-8 0"></path></svg>
+           <div class="badge">0</div>
+        </button>
+
+      </div>
+    </nav>
+
+    <main class="product-page-container">
+        <div class="container">
+            <div class="product-grid">
+                <!-- Image Section -->
+                <!-- Image Section -->
+                <div class="product-image-section glass-panel" style="padding: 0; overflow: hidden; height: auto;">
+                    <div class="carousel-container">
+                        <button class="carousel-btn prev" id="carousel-prev">&#10094;</button>
+                        <div class="carousel-track" id="carousel-track">
+                             <!-- Slide 1 (Video 1 High Impact) -->
+                            <div class="carousel-slide">
+                                <video src="/gallery/video1.mp4" autoplay muted loop playsinline style="pointer-events: none;"></video>
+                            </div>
+                             <!-- Slide 2 (Img 1) -->
+                            <div class="carousel-slide">
+                                <img src="/gallery/img1.jpg" alt="Mini Camera A9 View 1">
+                            </div>
+                             <!-- Slide 3 (Img 2) -->
+                             <div class="carousel-slide">
+                                <img src="/gallery/img2.jpg" alt="Mini Camera A9 View 2">
+                            </div>
+                             <!-- Slide 4 (Video 2) -->
+                             <div class="carousel-slide">
+                                <video src="/gallery/video2.mp4" autoplay muted loop playsinline style="pointer-events: none;"></video>
+                            </div>
+                             <!-- Slide 5 (Img 3) -->
+                             <div class="carousel-slide">
+                                <img src="/gallery/img3.jpg" alt="Mini Camera A9 View 3">
+                            </div>
+                            <!-- Slide 6 (Img 4) -->
+                             <div class="carousel-slide">
+                                <img src="/gallery/img4.jpg" alt="Mini Camera A9 View 4">
+                            </div>
+                             <!-- Slide 7 (Img 5) -->
+                             <div class="carousel-slide">
+                                <img src="/gallery/img5.jpg" alt="Mini Camera A9 View 5">
+                            </div>
+                             <!-- Slide 8 (Img 6) -->
+                             <div class="carousel-slide">
+                                <img src="/gallery/img6.jpg" alt="Mini Camera A9 View 6">
+                            </div>
+                        </div>
+                        <button class="carousel-btn next" id="carousel-next">&#10095;</button>
+                    </div>
+                </div>
+
+                <!-- Info Section -->
+                <div class="product-info">
+                    <span class="tag">MEILLEURE VENTE</span>
+                    <h1>Mini Caméra A9</h1>
+                    
+                    <div class="price-container">
+                        <span class="old-price">15 000 FCFA</span>
+                        <span class="new-price" id="main-price">7 000 FCFA</span>
+                        <span class="badge-promo">Promo</span>
+                    </div>
+
+                    <!-- 5 Stars requested placement -->
+                    <div class="stars-display">
+                        ⭐⭐⭐⭐⭐
+                        <span class="stars-text">(4.8/5 sur 120 avis)</span>
+                    </div>
+
+                    <!-- Quantity Section (Moved) -->
+                    <div class="quantity-section" style="margin-bottom: 20px; background: rgba(255,255,255,0.05); padding: 15px; border-radius: 12px; display: flex; align-items: center; justify-content: space-between;">
+                        <span style="color: #ccc; font-weight: 600;">Quantité :</span>
+                        <div class="qty-controls" style="display: flex; align-items: center; gap: 15px;">
+                            <button id="qty-minus" style="width: 32px; height: 32px; border-radius: 50%; border: 1px solid #444; background: #222; color: #fff; cursor: pointer;">-</button>
+                            <span id="qty-display" style="font-size: 1.2rem; font-weight: bold; width: 20px; text-align: center;">0</span>
+                            <button id="qty-plus" style="width: 32px; height: 32px; border-radius: 50%; border: 1px solid #fff; background: #fff; color: #000; cursor: pointer;">+</button>
+                        </div>
+                    </div>
+                    
+                    <div class="total-price-display" style="margin-bottom: 20px; text-align: right; color: var(--accent-green); font-size: 1.1rem;">
+                        Total : <span id="total-price" style="font-weight: bold;">0 FCFA</span>
+                    </div>
+
+                    <!-- ORDER FORM (Requested Placement) -->
+                    <div id="quick-order-form" class="glass-panel" style="padding: 20px; margin-bottom: 25px; border: 1px solid var(--accent-green); background: rgba(0,255,136, 0.05);">
+                        <h3 style="margin-bottom: 15px; color: #fff; font-size: 1.2rem;">Commander Rapidement</h3>
+                        <form id="whatsapp-order-form" style="display: flex; flex-direction: column; gap: 12px;">
+                            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 10px;">
+                                <input type="text" id="order-nom" placeholder="Nom" required style="width: 100%; box-sizing: border-box; padding: 12px; background: rgba(255,255,255,0.1); border: 1px solid #444; border-radius: 8px; color: #fff;">
+                                <input type="text" id="order-prenom" placeholder="Prénom" required style="width: 100%; box-sizing: border-box; padding: 12px; background: rgba(255,255,255,0.1); border: 1px solid #444; border-radius: 8px; color: #fff;">
+                            </div>
+                            <input type="tel" id="order-tel" placeholder="Numéro de Téléphone" required style="width: 100%; box-sizing: border-box; padding: 12px; background: rgba(255,255,255,0.1); border: 1px solid #444; border-radius: 8px; color: #fff;">
+                            <input type="text" id="order-lieu" placeholder="Lieu de livraison (Ville, Commune, Quartier)" required style="width: 100%; box-sizing: border-box; padding: 12px; background: rgba(255,255,255,0.1); border: 1px solid #444; border-radius: 8px; color: #fff;">
+                            
+                            <button type="submit" class="cta-primary" style="width: 100%; justify-content: center; margin-top: 10px;">
+                                Valider la commande
+                            </button>
+                        </form>
+                    </div>
+
+                    <p class="description-full">
+                        La Mini Caméra A9 est la solution ultime pour sécuriser votre espace en toute discrétion. Dotée d'une technologie de vision nocturne avancée et d'un détecteur de mouvement intelligent, elle vous alerte instantanément sur votre smartphone.
+                        <br><br>
+                        Son design magnétique permet une installation facile sur n'importe quelle surface métallique. Idéale pour surveiller votre domicile, votre bureau, ou même comme babyphone.
+                    </p>
+
+                    <ul class="features-list">
+                        <li>Connexion WiFi & Directe</li>
+                        <li>Vision Nocturne Infrarouge</li>
+                        <li>Angle de vue 150°</li>
+                        <li>Batterie rechargeable (1h autonomie)</li>
+                        <li>Support Magnétique inclus</li>
+                    </ul>
+                    
+                    <div class="reassurance-hero">
+                        Livraison 24h/48h · Garantie Satisfait ou Remboursé
+                    </div>
+                </div>
+            </div>
+
+            <!-- Reviews Section -->
+            <section class="reviews-section-page" style="overflow: visible;">
+                <div class="reviews-header">
+                    <h2>Avis Clients</h2>
+                    <p>Découvrez pourquoi nos clients adorent la Mini Caméra A9</p>
+                </div>
+
+                <!-- wrapper with overflow visible to show the floating button -->
+                <div class="page-reviews-wrapper" style="position: relative; margin: 0 auto; width: 100%; max-width: 800px; height: 150px; overflow: visible;">
+                     <div class="reviews-mask" style="width: 100%; height: 100%; overflow: hidden; mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent); -webkit-mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent); position: relative;">
+                         <!-- Reuse existing track ID for JS logic -->
+                         <div class="reviews-track" id="reviewsTrack" style="display: flex; gap: 20px; position: absolute; left: 0; animation: scrollMarquee 15s linear infinite; width: max-content;">
+                             <!-- JS will populate this -->
+                         </div>
+                     </div>
+                     <!-- Button explicitly positioned with high z-index -->
+                     <button id="add-review-btn" class="add-review-btn" title="Laisser un avis" style="position: absolute; top: -25px; right: 10px; z-index: 1000; box-shadow: 0 4px 15px rgba(0,0,0,0.8); background: var(--accent-green); color: #000; border: none; width: 40px; height: 40px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.5rem; cursor: pointer;">+</button>
+                </div>
+            </section>
+
+            <!-- FAQ Section -->
+            <section class="faq-section" style="margin-top: 80px; max-width: 700px; margin-left: auto; margin-right: auto; padding-bottom: 80px; display: flex; flex-direction: column; align-items: center;">
+                <h2 style="text-align: center; margin-bottom: 40px; font-size: 2.5rem;">Questions Fréquentes</h2>
+                <div class="faq-grid" style="width: 100%; display: flex; flex-direction: column; gap: 20px;">
+                    
+                    <div class="faq-item glass-panel" style="padding: 25px; cursor: pointer; border-radius: 16px; transition: background 0.3s;">
+                        <div class="faq-question" style="display: flex; justify-content: space-between; align-items: center; font-weight: 600; font-size: 1.1rem; color: #fff;">
+                            <span>La caméra fonctionne-t-elle sans WiFi ?</span>
+                            <span class="faq-toggle" style="font-size: 1.5rem;">+</span>
+                        </div>
+                        <div class="faq-answer" style="margin-top: 15px; color: #ccc; line-height: 1.6; display: none; padding-top: 15px; border-top: 1px solid rgba(255,255,255,0.1);">
+                            Oui, absolument ! La caméra peut enregistrer directement sur une carte micro SD (non incluse) sans aucune connexion internet. Vous pourrez visionner les enregistrements plus tard sur votre ordinateur.
+                        </div>
+                    </div>
+
+                    <div class="faq-item glass-panel" style="padding: 25px; cursor: pointer; border-radius: 16px; transition: background 0.3s;">
+                        <div class="faq-question" style="display: flex; justify-content: space-between; align-items: center; font-weight: 600; font-size: 1.1rem; color: #fff;">
+                            <span>Quelle est l'autonomie de la batterie ?</span>
+                            <span class="faq-toggle" style="font-size: 1.5rem;">+</span>
+                        </div>
+                        <div class="faq-answer" style="margin-top: 15px; color: #ccc; line-height: 1.6; display: none; padding-top: 15px; border-top: 1px solid rgba(255,255,255,0.1);">
+                            La batterie intégrée dure environ 60 minutes en enregistrement continu. Cependant, **vous pouvez la laisser branchée sur secteur ou sur une batterie externe** pour une surveillance 24h/24 et 7j/7 sans interruption.
+                        </div>
+                    </div>
+
+                    <div class="faq-item glass-panel" style="padding: 25px; cursor: pointer; border-radius: 16px; transition: background 0.3s;">
+                        <div class="faq-question" style="display: flex; justify-content: space-between; align-items: center; font-weight: 600; font-size: 1.1rem; color: #fff;">
+                            <span>Puis-je voir les images sur mon téléphone à distance ?</span>
+                            <span class="faq-toggle" style="font-size: 1.5rem;">+</span>
+                        </div>
+                        <div class="faq-answer" style="margin-top: 15px; color: #ccc; line-height: 1.6; display: none; padding-top: 15px; border-top: 1px solid rgba(255,255,255,0.1);">
+                            Oui ! Grâce à l'application gratuite fournie, vous pouvez visionner le flux vidéo en direct de n'importe où dans le monde, tant que la caméra est connectée au WiFi de votre domicile.
+                        </div>
+                    </div>
+
+                    <div class="faq-item glass-panel" style="padding: 25px; cursor: pointer; border-radius: 16px; transition: background 0.3s;">
+                        <div class="faq-question" style="display: flex; justify-content: space-between; align-items: center; font-weight: 600; font-size: 1.1rem; color: #fff;">
+                            <span>La vision nocturne est-elle visible ?</span>
+                            <span class="faq-toggle" style="font-size: 1.5rem;">+</span>
+                        </div>
+                        <div class="faq-answer" style="margin-top: 15px; color: #ccc; line-height: 1.6; display: none; padding-top: 15px; border-top: 1px solid rgba(255,255,255,0.1);">
+                            Non, la caméra utilise des LED infrarouges invisibles à l'œil nu. Elle peut filmer dans le noir total tout en restant parfaitement discrète.
+                        </div>
+                    </div>
+
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <footer class="final-section" id="contact" style="margin-top: 0;">
+      <div class="container">
+        <div class="grid-layout">
+           <div class="product-recap">
+             <h2>Market CI</h2>
+             <p>Livraison rapide · Paiement à la réception</p>
+             <div class="social-links">
+                <a href="#" class="social-icon">Facebook</a>
+                <a href="#" class="social-icon">WhatsApp</a>
+                <a href="#" class="social-icon">Instagram</a>
+             </div>
+           </div>
+           
+           <div class="checkout-panel glass-panel">
+             <h3>Besoin d'aide ?</h3>
+             <p style="color: #aaa; margin-bottom: 20px;">Contactez notre service client sur WhatsApp pour une réponse immédiate.</p>
+             <button class="cta-large shimmer-effect">Contacter sur WhatsApp</button>
+           </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Search Modal -->
+    <div id="search-modal" class="modal">
+        <div class="modal-content glass-panel" style="max-width: 500px;">
+            <span class="close-modal" id="close-search">&times;</span>
+            <h3 style="text-align: center;">Rechercher un produit</h3>
+            <input type="text" id="search-input" placeholder="Tapez le nom d'un produit..." style="width: 100%; padding: 15px; margin-top: 20px; background: #222; border: 1px solid #444; color: #fff; border-radius: 8px; font-size: 1rem;">
+            <div id="search-results" style="margin-top: 20px; max-height: 300px; overflow-y: auto;">
+                <!-- Results will act as links -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Cart Modal -->
+    <div id="cart-modal" class="modal">
+        <div class="modal-content glass-panel" style="max-width: 400px; text-align: center;">
+            <span class="close-modal" id="close-cart">&times;</span>
+            <h3>Votre Panier</h3>
+            <div id="cart-items" style="margin: 20px 0; text-align: left; background: rgba(255,255,255,0.05); padding: 15px; border-radius: 12px;">
+                <!-- Items will be injected here -->
+                <p style="color: #888; text-align: center;">Votre panier est vide.</p>
+            </div>
+            
+            <div class="cart-total" style="display: flex; justify-content: space-between; margin-bottom: 20px; font-weight: bold; font-size: 1.2rem;">
+                <span>Total</span>
+                <span id="cart-total-display">0 FCFA</span>
+            </div>
+
+            <button class="cta-primary" style="width: 100%; justify-content: center;" onclick="alert('Rediriger vers le checkout...')">
+                Commander maintenant
+            </button>
+        </div>
+    </div>
+
+    <!-- Review Modal (Reused) -->
+    <div id="review-modal" class="modal">
+        <div class="modal-content glass-panel">
+            <span class="close-modal" id="close-review">&times;</span>
+            <h3>Laisser un avis</h3>
+            <form id="review-form">
+                <input type="text" id="review-name" placeholder="Votre Nom" required>
+                <select id="review-rating">
+                    <option value="5">⭐⭐⭐⭐⭐</option>
+                    <option value="4">⭐⭐⭐⭐</option>
+                    <option value="3">⭐⭐⭐</option>
+                    <option value="2">⭐⭐</option>
+                    <option value="1">⭐</option>
+                </select>
+                <textarea id="review-comment" placeholder="Votre commentaire" required></textarea>
+                <div class="file-upload">
+                    <label for="review-photo">Photo (optionnel)</label>
+                    <input type="file" id="review-photo" accept="image/*">
+                </div>
+                <button type="submit" class="cta-primary">Envoyer</button>
+            </form>
+        </div>
+    </div>
+
+    <script type="module" src="src/main.js"></script>
+  </body>
+</html>
