@@ -7,8 +7,8 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap" rel="stylesheet">
-    <script type="module" crossorigin src="/assets/index-3G26Qxrm.js"></script>
-    <link rel="stylesheet" crossorigin href="/assets/index-fpJ-GSGf.css">
+    <script type="module" crossorigin src="/assets/index-BeOFBHfi.js"></script>
+    <link rel="stylesheet" crossorigin href="/assets/index-BTuG5674.css">
   </head>
   <body>
     <div id="loading-screen">
@@ -22,23 +22,21 @@
     </div>
 
     <nav class="glass-nav">
-      <div class="logo">ANTIGRAVITY</div>
+      <div class="logo">MARKET CI</div>
       <div class="nav-links">
-        <a href="#features">Caractéristiques</a>
-        <a href="#engineering">Ingénierie</a>
-        <a href="#reviews">Avis</a>
+        <a href="#">Accueil</a>
+        <a href="shop.html">Boutique</a>
+        <a href="#contact">Contact</a>
       </div>
       <div class="nav-actions">
-        <button class="icon-btn">
+        <button class="icon-btn" id="search-btn">
           <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
         </button>
         <button class="icon-btn">
           <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path><line x1="3" y1="6" x2="21" y2="6"></line><path d="M16 10a4 4 0 0 1-8 0"></path></svg>
-           <div class="badge">1</div>
+           <div class="badge">0</div>
         </button>
-        <div class="avatar">
-           <div class="avatar-gradient"></div>
-        </div>
+
       </div>
     </nav>
 
@@ -54,41 +52,57 @@
         <section class="step step-hero">
           <div class="hero-text fade-in-up">
             <span class="tag">ESSENTIEL</span>
-            <h1>Organic <br/> Kohaku Water</h1>
-            <p class="price">£39.00</p>
-            <p class="desc">Fraîche, acidulée et zestée de citron vert avec des notes mentholées rafraîchissantes.</p>
-            <button class="cta-primary">
-              <span class="icon">✓</span> Ajouter au panier
+            <h1>Mini Caméra <br/> A9</h1>
+            <div class="price-container">
+                <span class="old-price">15 000 FCFA</span>
+                <span class="new-price">7 000 FCFA</span>
+                <span class="badge-promo">Promo</span>
+            </div>
+            <p class="desc">Caméra de surveillance compacte avec vision nocturne, détection de mouvement et enregistrement HD. Discrète, facile à installer et idéale pour la maison, le bureau ou la boutique.</p>
+            <button class="cta-primary" onclick="window.location.href='product.html'">
+              <span class="icon">✓</span> Commander maintenant
             </button>
+            <div class="reassurance-hero">
+                Livraison rapide · Paiement à la réception · Assistance WhatsApp
+            </div>
           </div>
           
-          <!-- Example floating UI elements like in the reference -->
-          <div class="floating-card comment-card fade-in-right delay-1">
-             <div class="card-avatar"></div>
-             <div class="card-text">
-               <strong>Moyo Shiro</strong> a acheté
-               <span class="sub">juste maintenant</span>
+          <!-- Review Carousel -->
+          <div class="reviews-wrapper fade-in-right delay-1">
+             <div class="reviews-mask">
+                 <div class="reviews-track" id="reviewsTrack">
+                     <!-- Initial Review -->
+                     <div class="floating-card review-card">
+                         <div class="card-avatar"></div>
+                         <div class="card-text">
+                           <div class="stars">⭐⭐⭐⭐⭐</div>
+                           <strong>Moyo Shiro</strong>
+                           <span class="sub">Excellent produit !</span>
+                         </div>
+                     </div>
+                     <!-- Duplicate for smooth loop if needed, but JS will handle adding -->
+                 </div>
              </div>
-             <div class="card-icon">🛍️</div>
+             <button id="add-review-btn" class="add-review-btn" title="Laisser un avis">+</button>
           </div>
         </section>
         
         <!-- FRAME 60-100: DECOMPOSITION START -->
         <section class="step step-feature-1">
           <div class="feature-card glass-panel fade-in-left">
-            <h3>Pureté Absolue</h3>
-            <p>Une filtration naturelle qui préserve chaque minéral essentiel.</p>
+            <h3>Vision Nocturne</h3>
+            <p>Technologie infrarouge avancée pour une clarté optimale même dans l'obscurité totale.</p>
           </div>
         </section>
 
         <!-- FRAME 120-160: COMPONENTS -->
          <section class="step step-feature-2">
           <div class="feature-card glass-panel fade-in-right">
-            <h3>Ingrédients</h3>
+            <h3>Spécifications</h3>
             <ul class="ingredient-list">
-              <li><span>Eau de source</span> <span>98%</span></li>
-              <li><span>Extrait de Yuzu</span> <span>1.5%</span></li>
-              <li><span>Menthe sauvage</span> <span>0.5%</span></li>
+              <li><span>Résolution</span> <span>1080p HD</span></li>
+              <li><span>Angle</span> <span>150°</span></li>
+              <li><span>Batterie</span> <span>~60 min</span></li>
             </ul>
           </div>
         </section>
@@ -96,8 +110,8 @@
         <!-- FRAME 180-220: RECOMPOSITION -->
          <section class="step step-feature-3">
           <div class="feature-card glass-panel fade-in-bottom">
-            <h3>Design Durable</h3>
-            <p>Bouteille en alliage 100% recyclable. Conçue pour durer.</p>
+            <h3>Compact & Discret</h3>
+            <p>Design magnétique facile à fixer partout. Invisible et efficace.</p>
           </div>
         </section>
 
@@ -107,29 +121,90 @@
       </div>
     </main>
 
-    <footer class="final-section">
+    <!-- Search Modal -->
+    <div id="search-modal" class="modal">
+        <div class="modal-content glass-panel" style="max-width: 500px;">
+            <span class="close-modal" id="close-search">&times;</span>
+            <h3 style="text-align: center;">Rechercher un produit</h3>
+            <input type="text" id="search-input" placeholder="Tapez le nom d'un produit..." style="width: 100%; padding: 15px; margin-top: 20px; background: #222; border: 1px solid #444; color: #fff; border-radius: 8px; font-size: 1rem;">
+            <div id="search-results" style="margin-top: 20px; max-height: 300px; overflow-y: auto;">
+                <!-- Results will act as links -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Cart Modal -->
+    <div id="cart-modal" class="modal">
+        <div class="modal-content glass-panel" style="max-width: 400px; text-align: center;">
+            <span class="close-modal" id="close-cart">&times;</span>
+            <h3>Votre Panier</h3>
+            <div id="cart-items" style="margin: 20px 0; text-align: left; background: rgba(255,255,255,0.05); padding: 15px; border-radius: 12px;">
+                <!-- Items will be injected here -->
+                <p style="color: #888; text-align: center;">Votre panier est vide.</p>
+            </div>
+            
+            <div class="cart-total" style="display: flex; justify-content: space-between; margin-bottom: 20px; font-weight: bold; font-size: 1.2rem;">
+                <span>Total</span>
+                <span id="cart-total-display">0 FCFA</span>
+            </div>
+
+            <button class="cta-primary" style="width: 100%; justify-content: center;" onclick="alert('Rediriger vers le checkout...')">
+                Commander maintenant
+            </button>
+        </div>
+    </div>
+
+    <!-- Review Modal -->
+    <div id="review-modal" class="modal">
+        <div class="modal-content glass-panel">
+            <span class="close-modal">&times;</span>
+            <h3>Laisser un avis</h3>
+            <form id="review-form">
+                <input type="text" id="review-name" placeholder="Votre Nom" required>
+                <select id="review-rating">
+                    <option value="5">⭐⭐⭐⭐⭐</option>
+                    <option value="4">⭐⭐⭐⭐</option>
+                    <option value="3">⭐⭐⭐</option>
+                    <option value="2">⭐⭐</option>
+                    <option value="1">⭐</option>
+                </select>
+                <textarea id="review-comment" placeholder="Votre commentaire" required></textarea>
+                <div class="file-upload">
+                    <label for="review-photo">Photo (optionnel)</label>
+                    <input type="file" id="review-photo" accept="image/*">
+                </div>
+                <button type="submit" class="cta-primary">Envoyer</button>
+            </form>
+        </div>
+    </div>
+
+    <footer class="final-section" id="contact">
       <div class="container">
         <div class="grid-layout">
            <div class="product-recap">
-             <h2>Kohaku Water</h2>
-             <p>L'expérience ultime.</p>
-             <div class="trust-badges">
-               <span>🚚 Livraison Rapide</span>
-               <span>🛡️ Paiement sécurisé</span>
+             <h2>Market CI</h2>
+             <p>Livraison rapide · Paiement à la réception</p>
+             <div class="social-links">
+                <a href="#" class="social-icon">Facebook</a>
+                <a href="#" class="social-icon">WhatsApp</a>
+                <a href="#" class="social-icon">Instagram</a>
              </div>
            </div>
            
            <div class="checkout-panel glass-panel">
              <h3>Récapitulatif</h3>
              <div class="row">
-               <span>Kohaku Water (x6)</span>
-               <span>£39.00</span>
+               <span>Mini Caméra A9</span>
+               <span>7 000 FCFA</span>
              </div>
              <div class="row total">
                <span>Total</span>
-               <span>£39.00</span>
+               <span>7 000 FCFA</span>
              </div>
-             <button class="cta-large shimmer-effect">Commander Maintenant</button>
+             <button class="cta-large shimmer-effect" onclick="window.location.href='product.html'">Acheter et payer à la livraison</button>
+             <div class="reassurance-footer">
+                Livraison rapide · Paiement à la réception · Assistance WhatsApp
+             </div>
            </div>
         </div>
       </div>
